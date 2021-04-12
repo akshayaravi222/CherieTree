@@ -107,15 +107,15 @@
 		}
 
 		/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-		.sticky + #welcome {
-		  margin-top: 500px;
+		.sticky + #topJump{
+			padding-top: 100px;
 		}
 
 
 
 
 		.spacer{
-			background-image: linear-gradient(to right, #E9DAC4, #290A00, #290A00);
+			background-image: linear-gradient(to right, #E9DAC4, #7A1F00, #290A00);
 			width: 100%;
 			height: 5px;
 		}
@@ -168,6 +168,32 @@
 			height: 275px;
 			overflow: auto;
 		}
+
+
+
+		#nextBackground{
+			background-image: url("https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=6&m=922764830&s=612x612&w=0&h=G30qf42gar_aFgv3ivtY-n0NWdNgxRbp2jtQd_O8bxs=");
+			float: left;
+			height: 300px;
+			width: 40%;
+			right-border: 10px solid black;
+		}
+		#nextHeader h2{
+			margin-top: 100px;
+			text-align: center;
+			border: 10px solid #290A00;
+			background-color: #290A00;
+			color: #E9DAC4;
+		}
+		#whatsnext{
+			background-color: #E9DAC4;
+			padding-top: 25px;
+			padding-left: 10px;
+			height: 275px;
+			overflow: auto;
+		}
+
+
 	</style>
 </head>
 <body>
@@ -195,6 +221,8 @@
 		<!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
 	</div>
 
+	<div id="topJump" class="spacer"> </div>
+
 	<div id="what">
 		<div id="whatBackground">
 			<div id="whatHeader">
@@ -210,14 +238,28 @@
 
 	<div class="spacer"> </div>
 
-
 	<div id="how">
 		<div id="howBackground">
 			<div id="howHeader">
-				<h2> How do you use Cherie? </h2>
+				<h2> How do you use Chérie? </h2>
 			</div>
 		</div>
 		<div id="howToCherie">
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
+
+			Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
+		</div>
+	</div>
+
+	<div class="spacer"> </div>
+
+	<div id="next">
+		<div id="nextBackground">
+			<div id="nextHeader">
+				<h2> What's next? </h2>
+			</div>
+		</div>
+		<div id="whatsnext">
 			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
 
 			Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
