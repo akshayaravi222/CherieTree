@@ -8,8 +8,21 @@
 	<title>Cherie</title>
 
 	<style>
+		.y-mandatory-scroll-snapping {
+		    overflow-y: scroll;
+		    scroll-snap-type: y mandatory;
+		}
+
+
+
+
 		html{
 			font-family: 'Open Sans', sans-serif;
+			overflow: scroll;
+			  height: 100vh;
+			  scroll-snap-type: mandatory;
+			  scroll-snap-points-y: repeat(100vh);
+			  scroll-snap-type: y mandatory;
 		}
 		h1{
 			font-size: 80px;
@@ -30,8 +43,12 @@
 
 		#topBackground{
 			background-color: #290A00;
-			height: 70vh;
-			padding-top: 20vh;
+			height: 80vh;
+			scroll-snap-align: center;
+
+			margin-top: 15px;
+			padding-top: 30vh;
+
 		}
 		#welcome {
 			padding: 15px;
@@ -50,7 +67,7 @@
 			width: 375px;
 			height: 375px;
 			/*background: linear-gradient(to right, #E9DAC4, #290A00);*/
-			background-image: url("https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=6&m=922764830&s=612x612&w=0&h=G30qf42gar_aFgv3ivtY-n0NWdNgxRbp2jtQd_O8bxs=");
+			background-image: url("images/leaves.jpg");
 			padding: 10px;
 		}
 
@@ -80,6 +97,9 @@
 			background-color: #290A00;
 			height: 90px;
 			width: 100%;
+			position: fixed;
+			top: 0;
+			animation: fadein 1s;
 		}
 
 		#nav img{
@@ -100,16 +120,17 @@
 		}
 
 		/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-		.sticky {
+		/*.sticky {
 		  position: fixed;
 		  top: 0;
 		  width: 100%;
 		}
 
-		/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+		/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0)
 		.sticky + #topJump{
-			padding-top: 100px;
-		}
+			padding-top: 1000px;
+			margin-top: 500px;
+		}*/
 
 
 
@@ -121,18 +142,18 @@
 		}
 
 
-
-
-
+		#what{
+			scroll-snap-align: center;
+		}
 		#whatBackground{
-			background-image: url("https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=6&m=922764830&s=612x612&w=0&h=G30qf42gar_aFgv3ivtY-n0NWdNgxRbp2jtQd_O8bxs=");
-			float: left;
-			height: 300px;
-			width: 40%;
+			background-image: url("images/leaves.jpg");
+			height: 50vh;
+			width: 100%;
 			right-border: 10px solid black;
+			padding-top: 200px;
+			scroll-snap-align: center;
 		}
 		#whatHeader h2{
-			margin-top: 100px;
 			text-align: center;
 			border: 10px solid #290A00;
 			background-color: #290A00;
@@ -142,20 +163,23 @@
 			background-color: #E9DAC4;
 			padding-top: 25px;
 			padding-left: 10px;
-			height: 275px;
+			min-height: 100px;
 			overflow: auto;
+			padding-bottom: 15px;
 		}
 
-
+		#how{
+			scroll-snap-align: center;
+		}
 		#howBackground{
-			background-image: url("https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=6&m=922764830&s=612x612&w=0&h=G30qf42gar_aFgv3ivtY-n0NWdNgxRbp2jtQd_O8bxs=");
-			float: left;
-			height: 300px;
-			width: 40%;
+			background-image: url("images/leaves.jpg");
+			height: 50vh;
+			width: 100%;
 			right-border: 10px solid black;
+			padding-top: 200px;
+			scroll-snap-align: center;
 		}
 		#howHeader h2{
-			margin-top: 100px;
 			text-align: center;
 			border: 10px solid #290A00;
 			background-color: #290A00;
@@ -165,21 +189,23 @@
 			background-color: #E9DAC4;
 			padding-top: 25px;
 			padding-left: 10px;
-			height: 275px;
+			min-height: 100px;
 			overflow: auto;
+			padding-bottom: 15px;
 		}
 
 
-
+		#next{
+			scroll-snap-align: center;
+		}
 		#nextBackground{
-			background-image: url("https://media.istockphoto.com/photos/tropical-banana-palm-leaf-picture-id922764830?k=6&m=922764830&s=612x612&w=0&h=G30qf42gar_aFgv3ivtY-n0NWdNgxRbp2jtQd_O8bxs=");
-			float: left;
-			height: 300px;
-			width: 40%;
+			background-image: url("images/leaves.jpg");
+			height: 50vh;
+			width: 100%;
 			right-border: 10px solid black;
+			padding-top: 200px;
 		}
 		#nextHeader h2{
-			margin-top: 100px;
 			text-align: center;
 			border: 10px solid #290A00;
 			background-color: #290A00;
@@ -189,28 +215,61 @@
 			background-color: #E9DAC4;
 			padding-top: 25px;
 			padding-left: 10px;
-			height: 275px;
+			min-height: 100px;
 			overflow: auto;
+			padding-bottom: 15px;
 		}
 
+
+
+		.service-stick-mode{
+		  margin-top:70px;
+		 }
+
+
+
+		 #backtotop{
+		 	display: flex;
+		 	align-items: right;
+		 	justify-content: right;
+		 	position: fixed;
+		 	right: 5px;
+		 	bottom: 5px;
+		 	background-color: hsla(360, 100%, 0%, 0.5);
+		 	float: right;
+		 	border: 3px solid hsla(360, 100%, 100%, 0.73);
+		 	padding: 2px;
+
+		 }
+		 #backtotop a{
+		 	text-decoration: none;
+		 	color: hsla(360, 100%, 100%, 0.73);
+		 }
+
+
+		 @keyframes fadein {
+		   0% {
+		     opacity: 0;
+		   }
+		   50% {
+		     opacity: 0.5;
+		   }
+		   100% {
+		     opacity: 1;
+		   }
+		 }
 
 	</style>
 </head>
 <body>
-	<div id="topBackground">
-		<div class="gradBorder">
-			<div id="welcome">
-				<h1> More than a story. </h1>
-			</div>
-		</div>
-	</div>
 
 	<div id="nav">
 		<img src="images/almondLogo.png">
 
 		<div id="pageLinks">
 			<ul>
-				<li> <a href="#"> Stories </a> </li>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="stories.html"> Stories </a> </li>
 				<li> <a href="#"> About </a> </li>
 				<li> <a href="#"> Blog </a> </li>
 				<li> <a href="#"> Contact </a> </li>
@@ -221,70 +280,86 @@
 		<!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
 	</div>
 
+
+	<div id="topBackground" class="y-mandatory-scroll-snapping service-wrapper service-wrapper">
+		<div class="gradBorder">
+			<div id="welcome">
+				<h1> More than a story. </h1>
+			</div>
+		</div>
+
+
+		<div id="backtotop">
+			<a href="index.html"> <p> ↑ </p> </a>
+		</div>
+	</div>
+
+
+	
+
 	<div id="topJump" class="spacer"> </div>
 
-	<div id="what">
-		<div id="whatBackground">
-			<div id="whatHeader">
-				<h2> What is Chérie? </h2>
+	<div id="content service-wrapper">
+		<div id="what" class="y-mandatory-scroll-snapping">
+			<div id="whatBackground">
+				<div id="whatHeader">
+					<h2> What is Chérie? </h2>
+				</div>
+			</div>
+			<div id="cherieDescr">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
+
+				Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
 			</div>
 		</div>
-		<div id="cherieDescr">
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
 
-			Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
-		</div>
-	</div>
+		<div class="spacer"> </div>
 
-	<div class="spacer"> </div>
+		<div id="how" class="y-mandatory-scroll-snapping">
+			<div id="howBackground">
+				<div id="howHeader">
+					<h2> How do you use Chérie? </h2>
+				</div>
+			</div>
+			<div id="howToCherie">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
 
-	<div id="how">
-		<div id="howBackground">
-			<div id="howHeader">
-				<h2> How do you use Chérie? </h2>
+				Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
 			</div>
 		</div>
-		<div id="howToCherie">
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
 
-			Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
-		</div>
-	</div>
+		<div class="spacer"> </div>
 
-	<div class="spacer"> </div>
-
-	<div id="next">
-		<div id="nextBackground">
-			<div id="nextHeader">
-				<h2> What's next? </h2>
+		<div id="next" class="y-mandatory-scroll-snapping">
+			<div id="nextBackground">
+				<div id="nextHeader">
+					<h2> What's next? </h2>
+				</div>
 			</div>
-		</div>
-		<div id="whatsnext">
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
+			<div id="whatsnext">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet nisl id nisi consectetur, eget dignissim tellus convallis. Sed tempus pretium tellus, vel pellentesque augue ullamcorper tincidunt. Fusce nec elit id eros ornare pharetra nec eu odio. In ullamcorper ipsum quis diam tincidunt, id egestas mauris ultricies. Donec fringilla imperdiet placerat. Nunc mattis varius quam, at eleifend libero laoreet vel. Aliquam rutrum turpis nec suscipit commodo.
 
-			Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
+				Nam semper sem ac magna euismod, eget suscipit lectus accumsan. Vestibulum sit amet interdum arcu. Donec sed varius odio, id imperdiet libero. Phasellus luctus pellentesque sapien, quis pellentesque ipsum sodales ut. Curabitur vel porttitor sapien. Sed efficitur mi vel ultricies elementum. Vivamus enim neque, pulvinar in mauris vitae, blandit ornare augue. Sed justo dui, luctus vel arcu ut, auctor molestie erat. Sed volutpat enim purus, id facilisis leo vestibulum et. Aenean dignissim turpis diam. Duis sed lectus at dui maximus varius. Sed nec eros elit.</p>
+			</div>
 		</div>
 	</div>
 </body>
 
 <script>
-	// When the user scrolls the page, execute myFunction
 	window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var serviceWrapper = document.getElementById("service-wrapper")
+    var sticky = navbar.offsetTop;
 
-	// Get the navbar
-	var navbar = document.getElementById("nav");
-
-	// Get the offset position of the navbar
-	var sticky = navbar.offsetTop;
-
-	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-	function myFunction() {
-	  if (window.pageYOffset >= sticky) {
-	    navbar.classList.add("sticky")
-	  } else {
-	    navbar.classList.remove("sticky");
-	  }
-	}
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+        serviceWrapper.classList.add("service-stick-mode");
+      } else {
+        navbar.classList.remove("sticky");
+        serviceWrapper.classList.remove("service-stick-mode");
+      }
+    }
 </script>
 </html>
 
