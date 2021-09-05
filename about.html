@@ -12,6 +12,8 @@
 			font-family: 'Open Sans', sans-serif;
 			overflow: scroll;
 			  height: 100vh;
+			  background-color: #fffbf7;
+			  width:  100%;
 		}
 		h1{
 			font-size: 80px;
@@ -118,6 +120,53 @@
 		 	color: hsla(360, 100%, 100%, 0.73);
 		 }
 
+		 .abt-section{
+		 	min-height:  300px;
+		 	/*border-bottom:  2px solid #290A00;*/
+		 	margin-left:  20px;
+		 	padding-top:  20px;
+		 }
+		 .abt-section img{
+		 	width:  20%;
+		 	display:  flex;
+		 	float:  left;
+		 	margin-right:  20px;
+		 }
+
+		 .abt-section p{
+		 	padding-top:  20px;
+		 	line-height:  30px;
+		 }
+
+		 #mission{
+		 	clear:  both;
+		 }
+
+		 .spacer1{
+			height: 20px;
+			width:  100%;
+			clear:  both;
+		}
+
+		.spacer2{
+			background-image: linear-gradient(to right, #E9DAC4, #7A1F00, #290A00);
+			width: 100%;
+			height: 5px;
+			clear:  both;
+		}
+
+		footer{
+			background-color: #290A00;
+			height: 40px;
+			width: 100%;
+			color: #E9DAC4;
+		}
+		
+		footer p{
+			font-size: 15px;
+			text-align: center;
+			padding-top: 8px;
+		}
 	</style>
 </head>
 <body>
@@ -152,26 +201,45 @@
 		</div>
 	</div>
 
+	<div class="spacer2"></div>
 
-	<div id="akshaya">
+
+	<div id="akshaya" class="abt-section">
+		<img src = "images/fake-akshaya.jpg">
 		<h1 class="section"> Hi, I'm Akshaya! </h1>
-		<p> </p>
+		<p> Akshaya is a rising junior at Natick High School. Many of her interests lie within blending technology and social activism within her community. As someone who constantly has an eye on both the news and social media, she wanted to create a platform where people can easily learn about issues and how to take action. In her free time, Akshaya likes to go outside, spend time with her friends and family, debate, and cook. </p>
 	</div>
 
-	<div id="melica">
+	<div class="spacer1"></div>
+	<div class="spacer2"></div>
+
+	<div id="melica" class="abt-section">
+		<img src = "images/fake-melica.jpg">
 		<h1 class="section"> Hi, I'm Melica! </h1>
-		<p> </p>
+		<p> Melica is a rising senior at Natick High School who has always wanted to create a space where people can learn, take action, and share their personal experiences, opinions, and ideas. Since she started watching the news, she’s been immensely passionate about making sure that no major issue goes unnoticed due to limited media coverage. In her free time, Melica likes to draw, play with her cats, and go shopping. </p>
 	</div>
 
-	<div id="mission">
+	<div class="spacer1"></div>
+	<div class="spacer2"></div>
+
+	<div id="mission" class="abt-section">
+		<img src="images/voice.jpg">
 		<h1 class="section"> What is our mission? </h1>
-		<p> Being inspired by the recent uprising of movements and advocacy for change through social media, we wanted to create a platform everyone can use to both educate themselves on various issues, take action, and speak on their own experiences. </p>
+		<p> Being inspired by the recent uprising of movements and advocacy for change through social media, we wanted to create a safe and interactive platform everyone can use to both educate themselves on various issues, take action, and speak on their own experiences.  
+		<br> <br>
+		TL;DR: Chérie is a site where you can learn, educate, and take action on a variety of global issues. </p>
 	</div>
 
-	<div id="about">
-		<h1 class="section"> What is on this site? </h1>
-		<p> </p>
+	<div class="spacer1"></div>
+	<div class="spacer2"></div>
+
+	<div id="about" class="abt-section">
+		<img src="images/redLogo.png">
+		<h1 class="section"> How do you use Cherie? </h1>
+		<p> Cherie can be used by anyone who is interested in learning about major global issues, taking action/inciting change to better the status quo, or speaking on certain issues through submitting a blogpost. When reading about issues and other people’s experiences, it is important to keep an open mind and remain respectful. There will be absolutely no tolerance for any form of discrimination. </p>
 	</div>
+
+	<footer> <p> Chérie Tree • About • Last updated: 9/4/2021 10:50 PM </p> </footer>
 </body>
 </html>
 
