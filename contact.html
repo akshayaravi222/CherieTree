@@ -8,8 +8,7 @@
       rel="stylesheet"
     />
 
-    <title>Cherie</title>
-
+    <title>Contact Cherie</title>
     <style>
       .y-mandatory-scroll-snapping {
         overflow-y: scroll;
@@ -25,13 +24,13 @@
         scroll-snap-type: y mandatory;
       }
       h1 {
-        font-size: 80px;
+        font-size: 65px;
       }
       h2 {
         font-size: 50px;
       }
       p {
-        font-size: 20px;
+        font-size: 40px;
       }
       li {
         font-size: 20px;
@@ -107,16 +106,16 @@
 
       /* The sticky class is added to the navbar with JS when it reaches its scroll position */
       /*.sticky {
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
-		}
-
-		/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0)
-		.sticky + #topJump{
-			padding-top: 1000px;
-			margin-top: 500px;
-		}*/
+            position: fixed;
+            top: 0;
+            width: 100%;
+          }
+  
+          /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0)
+          .sticky + #topJump{
+              padding-top: 1000px;
+              margin-top: 500px;
+          }*/
 
       .spacer {
         background-image: linear-gradient(to right, #e9dac4, #7a1f00, #290a00);
@@ -259,7 +258,7 @@
     >
       <div class="gradBorder">
         <div id="welcome">
-          <h1>More than a story.</h1>
+          <h1>Connect With Us.</h1>
         </div>
       </div>
 
@@ -274,72 +273,14 @@
       <div id="what" class="y-mandatory-scroll-snapping">
         <div id="whatBackground">
           <div id="whatHeader">
-            <h2>What is Chérie?</h2>
+            <h2>Email and Instagram</h2>
           </div>
         </div>
         <div id="cherieDescr">
-          <p style="text-align: center">
-            Chérie is a site where you can learn, educate, and take action on a
-            variety of global issues.
-          </p>
-        </div>
-      </div>
-
-      <div class="spacer"></div>
-
-      <div id="how" class="y-mandatory-scroll-snapping">
-        <div id="howBackground">
-          <div id="howHeader">
-            <h2>How do you use Chérie?</h2>
-          </div>
-        </div>
-        <div id="howToCherie">
-          <p style="text-align: center">
-            Cherie can be used by anyone who is interested in learning about
-            major global issues, taking action/inciting change to better the
-            status quo, or speaking on certain issues through submitting a
-            blogpost. When reading about issues and other people’s experiences,
-            it is important to keep an open mind and remain respectful. There
-            will be absolutely no tolerance for any form of discrimination.
-          </p>
-        </div>
-      </div>
-
-      <div class="spacer"></div>
-
-      <div id="next" class="y-mandatory-scroll-snapping">
-        <div id="nextBackground">
-          <div id="nextHeader">
-            <h2>What's next?</h2>
-          </div>
-        </div>
-        <div id="whatsnext">
-          <p style="text-align: center">
-            Feel free to look around the website, share our page with somone,
-            take action, submit a blogpost, or contact us at
-            contactcherietree@gmail.com
-          </p>
+          <p style="text-align: center">contactcherietree@gmail.com</p>
+          <p style="text-align: center">@Cherie_Tree</p>
         </div>
       </div>
     </div>
   </body>
-
-  <script>
-    window.onscroll = function () {
-      myFunction();
-    };
-    var navbar = document.getElementById("navbar");
-    var serviceWrapper = document.getElementById("service-wrapper");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-        serviceWrapper.classList.add("service-stick-mode");
-      } else {
-        navbar.classList.remove("sticky");
-        serviceWrapper.classList.remove("service-stick-mode");
-      }
-    }
-  </script>
 </html>

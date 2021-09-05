@@ -1,102 +1,134 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
-	<title>Blog</title>
+    <title>Blog</title>
 
+    <style>
+      html {
+        font-family: "Open Sans", sans-serif;
+      }
+      h1 {
+        font-size: 80px;
+      }
+      h2 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
+      li {
+        font-size: 20px;
+      }
 
-	<style>
-		html{
-			font-family: 'Open Sans', sans-serif;
-		}
-		h1{
-			font-size: 80px;
-		}
-		h2{
-			font-size: 50px;
-		}
-		p{
-			font-size: 20px;
-		}
-		li{
-			font-size: 20px;
-		}
+      #pageLinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
+      #pageLinks a {
+        text-decoration: none;
+        color: #e9dac4;
+      }
 
+      #nav {
+        background-color: #290a00;
+        height: 90px;
+        width: 100%;
+        position: fixed;
+      }
 
-		#pageLinks{
-			display: flex;
-  			align-items: center;
-  			justify-content: center;
-		}
+      #nav img {
+        width: 75px;
+        float: left;
+        position: absolute;
+      }
 
-		#pageLinks a{
-			text-decoration: none;
-			color: #E9DAC4;
-		}
+      #nav li {
+        list-style-type: none;
+        float: left;
+        padding-right: 30px;
+        color: #e9dac4;
+      }
 
-		#nav{
-			background-color: #290A00;
-			height: 90px;
-			width: 100%;
-			position: fixed;
-		}
+      #nav ul {
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <img src="images/almondLogo.png" />
 
-		#nav img{
-			width: 75px;
-			float: left;
-			position: absolute;
-		}
+      <div id="pageLinks">
+        <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="stories.html"> Stories </a></li>
+          <li><a href="about.html"> About </a></li>
+          <li><a href="blog.html"> Blog </a></li>
+          <li><a href="contact.html"> Contact </a></li>
+          <li><a href="more.html"> More </a></li>
+        </ul>
+      </div>
+    </div>
 
-		#nav li{
-			list-style-type: none;
-			float: left;
-			padding-right: 30px;
-			color: #E9DAC4;
-		}
-
-		#nav ul{
-			padding-top: 30px;
-		}
-
-	</style>
-</head>
-<body>
-	<div id="nav">
-		<img src="images/almondLogo.png">
-
-		<div id="pageLinks">
-			<ul>
-				<li> <a href="#"> Stories </a> </li>
-				<li> <a href="#"> About </a> </li>
-				<li> <a href="#"> Blog </a> </li>
-				<li> <a href="#"> Contact </a> </li>
-				<li> <a href="#"> More </a> </li>
-			</ul>
-		</div>
-
-	</div>
-
-
-
-
-</body>
+    <div id="backtotop">
+      <a href="#"> <p>↑</p> </a>
+    </div>
+    <div id="desc">
+      <div class="contSect" id="summary">
+        <div class="sectionHeader">
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <!-- Maybe find a cleaner way of doing this :oo -->
+          <h1 style="text-align: center">WHAT IS THE BLOG?</h1>
+          <br />
+          <br />
+          <p style="text-align: center">
+            The blog is a place for you to share your experiences and thoughts
+            on current events and issues happening around the world.
+          </p>
+          <br />
+          <br />
+          <h2 style="text-align: center">SOME THINGS TO KEEP IN MIND</h2>
+          <br />
+          <br />
+          <p style="text-align: center">
+            1. Your work will be reviewed before being shared on our platform
+          </p>
+          <p style="text-align: center">
+            2: Be respectful, be civil, be reasonable, and be professional
+          </p>
+          <p style="text-align: center">
+            3: No form of discrimination will be tolerated
+          </p>
+          <p style="text-align: center">
+            4: All blog posts come from uncertified sources, take each post with
+            a grain of salt and always seek out the facts before sharing
+            information.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p style="text-align: center">
+      <a href="blogSubmission.html"> SUBMIT A BLOGPOST HERE!</a>
+    </p>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

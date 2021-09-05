@@ -1,344 +1,390 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-	<title>Chérie · BLM</title>
+  <head>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chérie · Me Too</title>
 
-	<style>
-		html{
-			font-family: 'Open Sans', sans-serif;
-			overflow: scroll;
-			height: 100vh;
-			background-color: #E9DAC4;
-		}
-		h1{
-			font-size: 80px;
-		}
-		h2{
-			font-size: 50px;
-		}
-		p{
-			font-size: 20px;
-		}
-		li{
-			font-size: 20px;
-		}
+    <style>
+      html {
+        font-family: "Open Sans", sans-serif;
+        overflow: scroll;
+        height: 100vh;
+        background-color: #e9dac4;
+      }
+      h1 {
+        font-size: 80px;
+      }
+      h2 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+      }
+      li {
+        font-size: 20px;
+      }
 
+      #pageLinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
+      #pageLinks a {
+        text-decoration: none;
+        color: #e9dac4;
+      }
 
-		#pageLinks{
-			display: flex;
-  			align-items: center;
-  			justify-content: center;
-		}
+      #nav {
+        background-color: #290a00;
+        height: 90px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        animation: fadein 1s;
+      }
 
-		#pageLinks a{
-			text-decoration: none;
-			color: #E9DAC4;
-		}
+      #nav img {
+        width: 75px;
+        float: left;
+        position: absolute;
+      }
 
-		#nav{
-			background-color: #290A00;
-			height: 90px;
-			width: 100%;
-			position: fixed;
-			top: 0;
-			animation: fadein 1s;
-		}
+      #nav li {
+        list-style-type: none;
+        float: left;
+        padding-right: 30px;
+        color: #e9dac4;
+      }
 
-		#nav img{
-			width: 75px;
-			float: left;
-			position: absolute;
-		}
+      #nav ul {
+        padding-top: 30px;
+      }
 
-		#nav li{
-			list-style-type: none;
-			float: left;
-			padding-right: 30px;
-			color: #E9DAC4;
-		}
+      #topBackground {
+        background-color: #290a00;
+        height: 80vh;
+        scroll-snap-align: center;
 
-		#nav ul{
-			padding-top: 30px;
-		}
+        margin-top: 15px;
+        padding-top: 20vh;
+      }
+      #welcome {
+        padding: 15px;
+        background-color: #290a00;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        padding-top: 40px;
+      }
+      #welcome h1 {
+        color: #e9dac4;
+        display: inline-block;
+        letter-spacing: 0.03em;
+      }
+      .gradBorder {
+        margin: auto;
+        width: 415px;
+        height: 415px;
+        background-image: url("images/blm-collage.png");
+        background-size: 500px;
+        padding: 10px;
+      }
 
+      #backtotop {
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        background-color: hsla(360, 100%, 0%, 0.5);
+        float: right;
+        border: 3px solid hsla(360, 100%, 100%, 0.73);
+        padding: 2px;
+      }
+      #backtotop a {
+        text-decoration: none;
+        color: hsla(360, 100%, 100%, 0.73);
+      }
 
-		#topBackground{
-			background-color: #290A00;
-			height: 80vh;
-			scroll-snap-align: center;
+      #toc {
+        width: 99%;
+        height: 75px;
+        margin: auto;
+        border-bottom: 3px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #7a1f00, #290a00);
+      }
+      #toc h2 {
+        float: left;
+        margin-right: 30px;
+        color: #290a00;
+        padding-left: 10px;
+        padding-top: 5px;
+      }
+      #toc li {
+        float: left;
+        margin-right: 15px;
+        padding-top: 25px;
+      }
+      #toc a {
+        text-decoration: none;
+        color: #290a00;
+      }
 
-			margin-top: 15px;
-			padding-top: 20vh;
+      #mainContent {
+        background-color: #e9dac4;
+        width: 99%;
+        margin: auto;
+        clear: both;
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
 
-		}
-		#welcome {
-			padding: 15px;
-		  background-color: #290A00;
-		  margin: auto;
-		  width: 300px;
-		  height: 300px;
-		  margin-top: 30px;
-		  padding-top: 40px;
-		}
-		#welcome h1{
-			color: #E9DAC4;
-			display: inline-block;
-			letter-spacing: 0.03em;
-		}
-		.gradBorder{
-			margin: auto;
-			width: 415px;
-			height: 415px;
-			background-image: url("images/blm-collage.png");
-			background-size: 500px;
-			padding: 10px;
-		}
+      .contSect {
+        margin-top: 20px;
+        border-bottom: 2px dashed #290a00;
+        padding-bottom: 25px;
+      }
 
+      .sectionHeader {
+        width: 40%;
+        margin-top: 10px;
+        float: left;
+        border: 5px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, #7a1f00, #290a00);
+      }
+      .sectionHeader h1 {
+        text-align: center;
+        padding: 20px;
+      }
 
-		#backtotop{
-			display: flex;
-			align-items: right;
-			justify-content: right;
-			position: fixed;
-			right: 5px;
-			bottom: 5px;
-			background-color: hsla(360, 100%, 0%, 0.5);
-			float: right;
-			border: 3px solid hsla(360, 100%, 100%, 0.73);
-			padding: 2px;
+      .desc {
+        width: 58%;
+        float: left;
+        min-height: 150px;
+        padding-left: 15px;
+        padding-top: 15px;
+        line-height: 30px;
+      }
 
-		}
-		#backtotop a{
-			text-decoration: none;
-			color: hsla(360, 100%, 100%, 0.73);
-		}
+      .desc a {
+        color: #290a00;
+      }
 
+      .links {
+        margin-left: 30px;
+        list-style: disc;
+        list-style-position: inside;
+        color: #290a00;
+      }
 
+      footer {
+        background-color: #290a00;
+        height: 40px;
+        width: 100%;
+        color: #e9dac4;
+      }
 
-		#toc{
-			width: 99%;
-			height: 75px;
-			margin: auto;
-			border-bottom: 3px solid;
-			border-image-slice: 1;
-			border-image-source: linear-gradient(to left, #7A1F00, #290A00);
-		}
-		#toc h2{
-			float: left;
-			margin-right: 30px;
-			color: #290A00;
-			padding-left: 10px;
-			padding-top: 5px;
-		}
-		#toc li{
-			float: left;
-			margin-right: 15px;
-			padding-top: 25px;
-		}
-		#toc a{
-			text-decoration: none;
-			color: #290A00;
-		}
+      footer p {
+        font-size: 15px;
+        text-align: center;
+        padding-top: 8px;
+      }
 
+      @media screen and (max-width: 1000px) {
+        .sectionHeader {
+          border: none;
+          display: inline-grid;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <img src="images/almondLogo.png" />
 
+      <div id="pageLinks">
+        <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="stories.html"> Stories </a></li>
+          <li><a href="about.html"> About </a></li>
+          <li><a href="blog.html"> Blog </a></li>
+          <li><a href="contact.html"> Contact </a></li>
+          <li><a href="more.html"> More </a></li>
+        </ul>
+      </div>
+    </div>
 
-		#mainContent{
-			background-color: #E9DAC4;
-			width: 99%;
-			margin: auto;
-			clear: both;
-			padding-top: 10px;
-			display: grid;
-			grid-template-columns: 1fr;
-		}
-		
+    <div id="topBackground">
+      <div class="gradBorder">
+        <div id="welcome">
+          <h1>Black Lives Matter.</h1>
+        </div>
+      </div>
 
+      <div id="backtotop">
+        <a href="#"> <p>↑</p> </a>
+      </div>
+    </div>
 
-		.contSect{
-			margin-top: 20px;
-			border-bottom: 2px dashed #290A00;
-			padding-bottom: 25px;
-		}
+    <div id="toc">
+      <h2>Jump to...</h2>
+      <ul>
+        <li><a href="#toc"> Summary </a></li>
+        <li><a href="#summary"> Learn </a></li>
+        <li><a href="#learn"> Help </a></li>
+        <li><a href="#help"> Carrd.co </a></li>
+        <li><a href="#carrdco"> Extra </a></li>
+      </ul>
+    </div>
 
-		.sectionHeader{
-			width: 40%;
-			margin-top: 10px;
-			float: left;
-			border: 5px solid;
-		  	border-image-slice: 1;
-		  	border-image-source: linear-gradient(to left, #7A1F00, #290A00);
-		}
-		.sectionHeader h1{
-			text-align: center;
-		  	padding: 20px;
-		}
+    <div id="mainContent">
+      <div class="contSect" id="summary">
+        <div class="sectionHeader">
+          <h1>SUMMARY</h1>
+        </div>
+        <div class="desc">
+          <p>
+            The Black Lives Matter movement amplifies the voices of Black
+            Americans. They strive to diminish the effects of systemic white
+            supremacy and racism in America and around the world by establishing
+            “the validity of black life.”
+          </p>
+        </div>
+      </div>
+      <div class="contSect" id="learn">
+        <div class="sectionHeader">
+          <h1>LEARN</h1>
+        </div>
+        <div class="desc">
+          <p><a href="https://blacklivesmatter.com/"> BLM Home Page </a></p>
+          <p>
+            <a href="https://blmeducationalresources.carrd.co/">
+              Black Educational Resources
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.weforum.org/agenda/2016/08/black-lives-matter-movement-explained/"
+            >
+              WeForum BLM Explained
+            </a>
+          </p>
+          <p>
+            <a href="https://www.joincampaignzero.org/#vision">
+              Police Reform Solutions
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="contSect" id="help">
+        <div class="sectionHeader">
+          <h1>HELP</h1>
+        </div>
+        <div class="desc">
+          <p>
+            <a
+              href="https://nymag.com/strategist/article/where-to-donate-for-black-lives-matter.html"
+            >
+              Article on Where to Donate to Support BLM
+            </a>
+          </p>
+          <p>
+            <a href="https://www.blackvotersmatterfund.org/">
+              Donate to the Black Voters Matter Fund
+            </a>
+          </p>
+          <p>
+            <a href="https://colorofchange.org/"> Donate to Color of Change </a>
+          </p>
+          <p>
+            <a href="https://www.nationalcouncil.us/donation">
+              Donate to the National Council for Incarcerated and Formerly
+              Incarcerated Women and Girls
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.localmedia.org/journalism-fund-for-black-newspapers/"
+            >
+              Fund for Black Newspapers
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.vox.com/future-perfect/21729124/how-to-donate-to-black-lives-matter-charity"
+            >
+              Article on How to Donate to BLM Charities
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.change.org/m/improve-training-for-police-officers"
+            >
+              Petition to Improve Training
+            </a>
+          </p>
+          <p>
+            <a href="https://www.change.org/t/police-brutality-4">
+              Police Brutality Petition
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="contSect" id="carrdco">
+        <div class="sectionHeader">
+          <h1>CARRD.CO</h1>
+        </div>
+        <div class="desc">
+          <p>
+            <a href="https://blacklivesmatters.carrd.co/">
+              https://blacklivesmatters.carrd.co/
+            </a>
+          </p>
+          <p>
+            <a href="https://blmsites.carrd.co/">
+              https://blmsites.carrd.co/
+            </a>
+          </p>
+          <p>
+            <a href="https://blackownedbusinesses.carrd.co/">
+              https://blackownedbusinesses.carrd.co/
+            </a>
+          </p>
+        </div>
+      </div>
 
-		.desc{
-			width: 58%;
-			float: left;
-			min-height: 150px;
-			padding-left: 15px;
-			padding-top: 15px;
-			line-height: 30px;
-		}
-		
-		.desc a{
-			color: #290A00;
-		}
-		
-		.links{
-			margin-left: 30px;
-			list-style: disc;
-			list-style-position: inside;
-			color: #290A00;
+      <div class="contSect" id="extras">
+        <div class="sectionHeader">
+          <h1>EXTRA</h1>
+        </div>
+        <div class="desc">
+          <p>
+            <a href="https://www.youtube.com/watch?v=xv3dAJUTCT0">
+              BLM Brainpop Video (also great for kids/younger people!)
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
 
-		}
-		
-		
-		footer{
-			background-color: #290A00;
-			height: 40px;
-			width: 100%;
-			color: #E9DAC4;
-		}
-		
-		footer p{
-			font-size: 15px;
-			text-align: center;
-			padding-top: 8px;
-		}
+    <footer><p>Chérie Tree • BLM • Last updated: 4/23/2021 9:26 PM</p></footer>
+  </body>
 
-		
-		
-		@media screen and (max-width: 1000px) {
-			.sectionHeader{
-				border: none;
-				display: inline-grid;
-				margin: auto;
-			}
-		}
-
-	</style>
-</head>
-<body>
-	<div id="nav">
-		<img src="images/almondLogo.png">
-
-		<div id="pageLinks">
-			<ul>
-				<li> <a href="index.html"> Home </a> </li>
-				<li> <a href="stories.html"> Stories </a> </li>
-				<li> <a href="#"> About </a> </li>
-				<li> <a href="#"> Blog </a> </li>
-				<li> <a href="#"> Contact </a> </li>
-				<li> <a href="#"> More </a> </li>
-			</ul>
-		</div>
-
-	</div>
-
-
-	<div id="topBackground">
-		<div class="gradBorder">
-			<div id="welcome">
-				<h1> Black Lives Matter. </h1>
-			</div>
-		</div>
-
-
-		<div id="backtotop">
-			<a href="#"> <p> ↑ </p> </a>
-		</div>
-	</div>
-
-	<div id="toc">
-		<h2> Jump to... </h2>
-		<ul>
-			<li> <a href="#toc"> Summary </a> </li>
-			<li> <a href="#summary"> Learn </a> </li>
-			<li> <a href="#learn"> Help </a> </li>
-			<li> <a href="#help"> Carrd.co </a> </li>
-			<li> <a href="#carrdco"> Extra </a></li>
-		</ul>
-	</div>
-
-	<div id="mainContent">
-		<div class="contSect" id="summary">
-			<div class="sectionHeader">
-				<h1> SUMMARY </h1>
-			</div>
-			<div class="desc">
-				<p>The Black Lives Matter movement amplifies the voices of Black Americans. They strive to diminish the effects of systemic white supremacy and racism in America and around the world by establishing “the validity of black life.” </p>
-			</div>
-		</div>
-		<div class="contSect" id="learn">
-			<div class="sectionHeader">
-				<h1> LEARN </h1>
-			</div>
-			<div class="desc">
-				<p> <a href="https://blacklivesmatter.com/"> BLM Home Page </a></p>
-				<p> <a href="https://blmeducationalresources.carrd.co/"> Black Educational Resources </a></p>
-				<p> <a href="https://www.weforum.org/agenda/2016/08/black-lives-matter-movement-explained/"> WeForum BLM Explained </a></p>
-				<p> <a href="https://www.joincampaignzero.org/#vision"> Police Reform Solutions </a></p>
-			</div>
-		</div>
-		<div class="contSect" id="help">
-			<div class="sectionHeader">
-				<h1> HELP </h1>
-			</div>
-			<div class="desc">
-				<p> <a href="https://nymag.com/strategist/article/where-to-donate-for-black-lives-matter.html"> Article on Where to Donate to Support BLM </a></p>
-				<p> <a href="https://www.blackvotersmatterfund.org/"> Donate to the Black Voters Matter Fund </a></p>
-				<p> <a href="https://colorofchange.org/"> Donate to Color of Change </a></p>
-				<p> <a href="https://www.nationalcouncil.us/donation"> Donate to the National Council for Incarcerated and Formerly Incarcerated Women and Girls </a></p>
-				<p> <a href="https://www.localmedia.org/journalism-fund-for-black-newspapers/"> Fund for Black Newspapers </a></p>
-				<p> <a href="https://www.vox.com/future-perfect/21729124/how-to-donate-to-black-lives-matter-charity"> Article on How to Donate to BLM Charities </a></p>
-				<p> <a href="https://www.change.org/m/improve-training-for-police-officers"> Petition to Improve Training </a></p>
-				<p> <a href="https://www.change.org/t/police-brutality-4"> Police Brutality Petition </a></p>
-			</div>
-		</div>
-		<div class="contSect" id="carrdco">
-			<div class="sectionHeader">
-				<h1> CARRD.CO </h1>
-			</div>
-			<div class="desc">
-				<p> <a href="https://blacklivesmatters.carrd.co/"> https://blacklivesmatters.carrd.co/ </a></p>
-				<p> <a href="https://blmsites.carrd.co/"> https://blmsites.carrd.co/ </a></p>
-				<p> <a href="https://blackownedbusinesses.carrd.co/"> https://blackownedbusinesses.carrd.co/ </a></p>
-			</div>
-		</div>
-		
-		<div class="contSect" id="extras">
-			<div class="sectionHeader">
-				<h1> EXTRA </h1>
-			</div>
-			<div class="desc">
-				<p> <a href="https://www.youtube.com/watch?v=xv3dAJUTCT0"> BLM Brainpop Video (also great for kids/younger people!) </a></p>
-			</div>
-		</div>
-	</div>
-	
-	
-	<footer> <p> Chérie Tree • BLM • Last updated: 4/23/2021 9:26 PM </p> </footer>
-
-</body>
-
-<script>
-	window.alert("Content Warning: Some links may include graphic images and mentions of sexual violence, such as rape. ")
-</script>
+  <script>
+    window.alert(
+      "Content Warning: Some links may include graphic images and mentions of sexual violence, such as rape. "
+    );
+  </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
