@@ -1,377 +1,340 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <title>Chérie · Uighur Genocide</title>
+<head>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<title>Chérie · Uighur Genocide</title>
 
-    <style>
-      html {
-        font-family: "Open Sans", sans-serif;
-        overflow: scroll;
-        height: 100vh;
-        background-color: #e9dac4;
-      }
-      h1 {
-        font-size: 80px;
-      }
-      h2 {
-        font-size: 50px;
-      }
-      p {
-        font-size: 20px;
-      }
-      li {
-        font-size: 20px;
-      }
+	<style>
+		html{
+			font-family: 'Open Sans', sans-serif;
+			overflow: scroll;
+			height: 100vh;
+			background-color: #E9DAC4;
+		}
+		h1{
+			font-size: 80px;
+		}
+		h2{
+			font-size: 50px;
+		}
+		p{
+			font-size: 20px;
+		}
+		li{
+			font-size: 20px;
+		}
 
-      #pageLinks {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
 
-      #pageLinks a {
-        text-decoration: none;
-        color: #e9dac4;
-      }
 
-      #nav {
-        background-color: #290a00;
-        height: 90px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        animation: fadein 1s;
-      }
+		#pageLinks{
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
 
-      #nav img {
-        width: 75px;
-        float: left;
-        position: absolute;
-      }
+		#pageLinks a{
+			text-decoration: none;
+			color: #E9DAC4;
+		}
 
-      #nav li {
-        list-style-type: none;
-        float: left;
-        padding-right: 30px;
-        color: #e9dac4;
-      }
+		#nav{
+			background-color: #290A00;
+			height: 90px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			animation: fadein 1s;
+		}
 
-      #nav ul {
-        padding-top: 30px;
-      }
+		#nav img{
+			width: 75px;
+			float: left;
+			position: absolute;
+		}
 
-      #topBackground {
-        background-color: #290a00;
-        height: 80vh;
-        scroll-snap-align: center;
+		#nav li{
+			list-style-type: none;
+			float: left;
+			padding-right: 30px;
+			color: #E9DAC4;
+		}
 
-        margin-top: 15px;
-        padding-top: 20vh;
-      }
-      #welcome {
-        padding: 15px;
-        background-color: #290a00;
-        margin: auto;
-        width: 300px;
-        height: 300px;
-        margin-top: 30px;
-        padding-top: 40px;
-      }
-      #welcome h1 {
-        color: #e9dac4;
-        display: inline-block;
-        letter-spacing: 0.03em;
-        font-size: 75px;
-      }
-      .gradBorder {
-        margin: auto;
-        width: 415px;
-        height: 415px;
-        background-image: url("images/blm-collage.png");
-        background-size: 500px;
-        padding: 10px;
-      }
+		#nav ul{
+			padding-top: 30px;
+		}
 
-      #backtotop {
-        display: flex;
-        align-items: right;
-        justify-content: right;
-        position: fixed;
-        right: 5px;
-        bottom: 5px;
-        background-color: hsla(360, 100%, 0%, 0.5);
-        float: right;
-        border: 3px solid hsla(360, 100%, 100%, 0.73);
-        padding: 2px;
-      }
-      #backtotop a {
-        text-decoration: none;
-        color: hsla(360, 100%, 100%, 0.73);
-      }
 
-      #toc {
-        width: 99%;
-        height: 75px;
-        margin: auto;
-        border-bottom: 3px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to left, #7a1f00, #290a00);
-      }
-      #toc h2 {
-        float: left;
-        margin-right: 30px;
-        color: #290a00;
-        padding-left: 10px;
-        padding-top: 5px;
-      }
-      #toc li {
-        float: left;
-        margin-right: 15px;
-        padding-top: 25px;
-      }
-      #toc a {
-        text-decoration: none;
-        color: #290a00;
-      }
+		#topBackground{
+			background-color: #290A00;
+			height: 80vh;
+			scroll-snap-align: center;
 
-      #mainContent {
-        background-color: #e9dac4;
-        width: 99%;
-        margin: auto;
-        clear: both;
-        padding-top: 10px;
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+			margin-top: 15px;
+			padding-top: 20vh;
 
-      .contSect {
-        margin-top: 20px;
-        border-bottom: 2px dashed #290a00;
-        padding-bottom: 25px;
-      }
+		}
+		#welcome {
+			padding: 15px;
+		  background-color: #290A00;
+		  margin: auto;
+		  width: 300px;
+		  height: 300px;
+		  margin-top: 30px;
+		  padding-top: 40px;
+		}
+		#welcome h1{
+			color: #E9DAC4;
+			display: inline-block;
+			letter-spacing: 0.03em;
+			font-size: 75px;
+		}
+		.gradBorder{
+			margin: auto;
+			width: 415px;
+			height: 415px;
+			background-image: url("images/blm-collage.png");
+			background-size: 500px;
+			padding: 10px;
+		}
 
-      .sectionHeader {
-        width: 40%;
-        margin-top: 10px;
-        float: left;
-        border: 5px solid;
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to left, #7a1f00, #290a00);
-      }
-      .sectionHeader h1 {
-        text-align: center;
-        padding: 20px;
-      }
 
-      .desc {
-        width: 58%;
-        float: left;
-        min-height: 150px;
-        padding-left: 15px;
-        padding-top: 15px;
-        line-height: 30px;
-      }
+		#backtotop{
+			display: flex;
+			align-items: right;
+			justify-content: right;
+			position: fixed;
+			right: 5px;
+			bottom: 5px;
+			background-color: hsla(360, 100%, 0%, 0.5);
+			float: right;
+			border: 3px solid hsla(360, 100%, 100%, 0.73);
+			padding: 2px;
 
-      .desc a {
-        color: #290a00;
-      }
+		}
+		#backtotop a{
+			text-decoration: none;
+			color: hsla(360, 100%, 100%, 0.73);
+		}
 
-      .links {
-        margin-left: 30px;
-        list-style: disc;
-        list-style-position: inside;
-        color: #290a00;
-      }
 
-      footer {
-        background-color: #290a00;
-        height: 40px;
-        width: 100%;
-        color: #e9dac4;
-      }
 
-      footer p {
-        font-size: 15px;
-        text-align: center;
-        padding-top: 8px;
-      }
+		#toc{
+			width: 99%;
+			height: 75px;
+			margin: auto;
+			border-bottom: 3px solid;
+			border-image-slice: 1;
+			border-image-source: linear-gradient(to left, #7A1F00, #290A00);
+		}
+		#toc h2{
+			float: left;
+			margin-right: 30px;
+			color: #290A00;
+			padding-left: 10px;
+			padding-top: 5px;
+		}
+		#toc li{
+			float: left;
+			margin-right: 15px;
+			padding-top: 25px;
+		}
+		#toc a{
+			text-decoration: none;
+			color: #290A00;
+		}
 
-      @media screen and (max-width: 1000px) {
-        .sectionHeader {
-          border: none;
-          display: inline-grid;
-          margin: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="nav">
-      <img src="images/almondLogo.png" />
 
-      <div id="pageLinks">
-        <ul>
-          <li><a href="index.html"> Home </a></li>
-          <li><a href="stories.html"> Stories </a></li>
-          <li><a href="about.html"> About </a></li>
-          <li><a href="blog.html"> Blog </a></li>
-          <li><a href="contact.html"> Contact </a></li>
-          <li><a href="more.html"> More </a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div id="topBackground">
-      <div class="gradBorder">
-        <div id="welcome">
-          <h1>
-            Free <br />
-            the <br />
-            Uighurs.
-          </h1>
-        </div>
-      </div>
+		#mainContent{
+			background-color: #E9DAC4;
+			width: 99%;
+			margin: auto;
+			clear: both;
+			padding-top: 10px;
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+		
 
-      <div id="backtotop">
-        <a href="#"> <p>↑</p> </a>
-      </div>
-    </div>
 
-    <div id="toc">
-      <h2>Jump to...</h2>
-      <ul>
-        <li><a href="#toc"> Summary </a></li>
-        <li><a href="#summary"> Learn </a></li>
-        <li><a href="#learn"> Help </a></li>
-        <li><a href="#help"> Carrd.co </a></li>
-        <li><a href="#carrdco"> Extra </a></li>
-      </ul>
-    </div>
+		.contSect{
+			margin-top: 20px;
+			border-bottom: 2px dashed #290A00;
+			padding-bottom: 25px;
+		}
 
-    <div id="mainContent">
-      <div class="contSect" id="summary">
-        <div class="sectionHeader">
-          <h1>SUMMARY</h1>
-        </div>
-        <div class="desc">
-          <p>
-            Millions from the Chinese Uighur Muslim community have been subject
-            to oppression and injustice within reeducation camps.
-          </p>
-        </div>
-      </div>
-      <div class="contSect" id="learn">
-        <div class="sectionHeader">
-          <h1>LEARN</h1>
-        </div>
-        <div class="desc">
-          <p>
-            <a href="https://www.bbc.com/news/world-asia-china-22278037">
-              BBC
-            </a>
-          </p>
-          <p>
-            <a href="https://www.pbs.org/newshour/features/uighurs/"> PBS </a>
-          </p>
-          <p>
-            <a
-              href="https://www.nytimes.com/interactive/2019/11/16/world/asia/china-xinjiang-documents.html"
-            >
-              NY Times
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://abcnews.go.com/International/uighur-woman-living-france-speaks-alleged-chinese-education/story?id=76202537"
-            >
-              ABC News interviewing someone who went through the camps
-            </a>
-          </p>
-        </div>
-      </div>
-      <div class="contSect" id="help">
-        <div class="sectionHeader">
-          <h1>HELP</h1>
-        </div>
-        <div class="desc">
-          <p>
-            <a
-              href="https://www.change.org/p/stand-up-for-the-uyghur-muslims-in-china-antonioguterres-amnesty-un"
-            >
-              Stand up for Uighurs Petition
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://www.amnesty.org/en/get-involved/take-action/tell-china-to-close-its-secret-reeducation-camps-for-ethnic-minorities/"
-            >
-              Amnesty: get China to close re-education camps
-            </a>
-          </p>
-          <p>
-            <a href="https://petition.parliament.uk/petitions/300146">
-              UK Parliament Petition
-            </a>
-          </p>
-        </div>
-      </div>
-      <div class="contSect" id="carrdco">
-        <div class="sectionHeader">
-          <h1>CARRD.CO</h1>
-        </div>
-        <div class="desc">
-          <p>
-            <a href="https://justiceformuslims.carrd.co/ ">
-              https://justiceformuslims.carrd.co/
-            </a>
-          </p>
-          <p>
-            <a href="https://savetheuighurs.carrd.co/">
-              https://savetheuighurs.carrd.co/
-            </a>
-          </p>
-          <p>
-            <a href="https://uyghurs.carrd.co/"> https://uyghurs.carrd.co/ </a>
-          </p>
-          <p>
-            <a href="https://muslim.carrd.co/"> https://muslim.carrd.co/ </a>
-          </p>
-        </div>
-      </div>
+		.sectionHeader{
+			width: 40%;
+			margin-top: 10px;
+			float: left;
+			border: 5px solid;
+		  	border-image-slice: 1;
+		  	border-image-source: linear-gradient(to left, #7A1F00, #290A00);
+		}
+		.sectionHeader h1{
+			text-align: center;
+		  	padding: 20px;
+		}
 
-      <div class="contSect" id="extras">
-        <div class="sectionHeader">
-          <h1>EXTRA</h1>
-        </div>
-        <div class="desc">
-          <p>
-            <a href="https://www.youtube.com/watch?v=e6bPGl10Cts">
-              BBC Interview
-            </a>
-          </p>
-          <p>
-            <a href="https://www.youtube.com/watch?v=v7AYyUqrMuQ">
-              Vice Video
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
+		.desc{
+			width: 58%;
+			float: left;
+			min-height: 150px;
+			padding-left: 15px;
+			padding-top: 15px;
+			line-height: 30px;
+		}
+		
+		.desc a{
+			color: #290A00;
+		}
+		
+		.links{
+			margin-left: 30px;
+			list-style: disc;
+			list-style-position: inside;
+			color: #290A00;
 
-    <footer>
-      <p>Chérie Tree • Uighur Genocide • Last updated: 5/7/2021 2:15 PM</p>
-    </footer>
-  </body>
+		}
+		
+		
+		footer{
+			background-color: #290A00;
+			height: 40px;
+			width: 100%;
+			color: #E9DAC4;
+		}
+		
+		footer p{
+			font-size: 15px;
+			text-align: center;
+			padding-top: 8px;
+		}
 
-  <script>
-    window.alert(
-      "Content Warning: Some links may include graphic images and mentions of sexual violence, such as rape. "
-    );
-  </script>
+		
+		
+		@media screen and (max-width: 1000px) {
+			.sectionHeader{
+				border: none;
+				display: inline-grid;
+				margin: auto;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<img src="images/almondLogo.png">
+
+		<div id="pageLinks">
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="stories.html"> Stories </a> </li>
+				<li> <a href="about.html"> About </a> </li>
+				<li> <a href="contact.html"> Contact </a> </li>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<div id="topBackground">
+		<div class="gradBorder">
+			<div id="welcome">
+				<h1> Free <br> the <br> Uighurs. </h1>
+			</div>
+		</div>
+
+
+		<div id="backtotop">
+			<a href="#"> <p> ↑ </p> </a>
+		</div>
+	</div>
+
+	<div id="toc">
+		<h2> Jump to... </h2>
+		<ul>
+			<li> <a href="#toc"> Summary </a> </li>
+			<li> <a href="#summary"> Learn </a> </li>
+			<li> <a href="#learn"> Help </a> </li>
+			<li> <a href="#help"> Carrd.co </a> </li>
+			<li> <a href="#carrdco"> Extra </a></li>
+		</ul>
+	</div>
+
+	<div id="mainContent">
+		<div class="contSect" id="summary">
+			<div class="sectionHeader">
+				<h1> SUMMARY </h1>
+			</div>
+			<div class="desc">
+				<p>Millions from the Chinese Uighur Muslim community have been subject to oppression and injustice within reeducation camps.</p>
+			</div>
+		</div>
+		<div class="contSect" id="learn">
+			<div class="sectionHeader">
+				<h1> LEARN </h1>
+			</div>
+			<div class="desc">
+				<p> <a href="https://www.bbc.com/news/world-asia-china-22278037"> BBC </a></p>
+				<p> <a href="https://www.pbs.org/newshour/features/uighurs/"> PBS </a></p>
+				<p> <a href="https://www.nytimes.com/interactive/2019/11/16/world/asia/china-xinjiang-documents.html"> NY Times </a></p>
+				<p> <a href="https://abcnews.go.com/International/uighur-woman-living-france-speaks-alleged-chinese-education/story?id=76202537"> ABC News interviewing someone who went through the camps </a></p>
+			</div>
+		</div>
+		<div class="contSect" id="help">
+			<div class="sectionHeader">
+				<h1> HELP </h1>
+			</div>
+			<div class="desc">
+				<p> <a href="https://www.change.org/p/stand-up-for-the-uyghur-muslims-in-china-antonioguterres-amnesty-un"> Stand up for Uighurs Petition </a></p>
+				<p> <a href="https://www.amnesty.org/en/get-involved/take-action/tell-china-to-close-its-secret-reeducation-camps-for-ethnic-minorities/"> Amnesty: get China to close re-education camps </a></p>
+				<p> <a href="https://petition.parliament.uk/petitions/300146"> UK Parliament Petition </a></p>
+			</div>
+		</div>
+		<div class="contSect" id="carrdco">
+			<div class="sectionHeader">
+				<h1> CARRD.CO </h1>
+			</div>
+			<div class="desc">
+				<p> <a href="https://justiceformuslims.carrd.co/ "> https://justiceformuslims.carrd.co/  </a></p>
+				<p> <a href="https://savetheuighurs.carrd.co/"> https://savetheuighurs.carrd.co/ </a></p>
+				<p> <a href="https://uyghurs.carrd.co/"> https://uyghurs.carrd.co/ </a></p>
+				<p> <a href="https://muslim.carrd.co/"> https://muslim.carrd.co/ </a></p>
+			</div>
+		</div>
+		
+		<div class="contSect" id="extras">
+			<div class="sectionHeader">
+				<h1> EXTRA </h1>
+			</div>
+			<div class="desc">
+				<p> <a href="https://www.youtube.com/watch?v=e6bPGl10Cts"> BBC Interview </a></p>
+				<p> <a href="https://www.youtube.com/watch?v=v7AYyUqrMuQ"> Vice Video </a></p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<footer> <p> Chérie Tree • Uighur Genocide • Last updated: 5/7/2021 2:15 PM </p> </footer>
+
+</body>
+
+<script>
+	window.alert("Content Warning: Some links may include graphic images and mentions of sexual violence, such as rape. ")
+</script>
 </html>
+
+
+
+
+
+
+
+
+
+
+

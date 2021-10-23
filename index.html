@@ -1,345 +1,227 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+<head>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <title>Cherie</title>
+	<title>Chérie • Home</title>
 
-    <style>
-      .y-mandatory-scroll-snapping {
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-      }
-
-      html {
-        font-family: "Open Sans", sans-serif;
-        overflow: scroll;
-        height: 100vh;
-        scroll-snap-type: mandatory;
-        scroll-snap-points-y: repeat(100vh);
-        scroll-snap-type: y mandatory;
-      }
-      h1 {
-        font-size: 80px;
-      }
-      h2 {
-        font-size: 50px;
-      }
-      p {
-        font-size: 20px;
-      }
-      li {
-        font-size: 20px;
-      }
-
-      /* Page content */
-
-      #topBackground {
-        background-color: #290a00;
-        height: 80vh;
-        scroll-snap-align: center;
-
-        margin-top: 15px;
-        padding-top: 30vh;
-      }
-      #welcome {
-        padding: 15px;
-        background-color: #290a00;
-        margin: auto;
-        width: 250px;
-        margin-top: 50px;
-      }
-      #welcome h1 {
-        color: #e9dac4;
-        display: inline-block;
-        /*border: 5px solid #E9DAC4;*/
-      }
-      .gradBorder {
-        margin: auto;
-        width: 375px;
-        height: 375px;
-        /*background: linear-gradient(to right, #E9DAC4, #290A00);*/
-        background-image: url("images/leaves.jpg");
-        padding: 10px;
-      }
-
-      #pageLinks {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #pageLinks a {
-        text-decoration: none;
-        color: #e9dac4;
-      }
-
-      #nav {
-        background-color: #290a00;
-        height: 90px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        animation: fadein 1s;
-      }
-
-      #nav img {
-        width: 75px;
-        float: left;
-        position: absolute;
-      }
-
-      #nav li {
-        list-style-type: none;
-        float: left;
-        padding-right: 30px;
-        color: #e9dac4;
-      }
-
-      #nav ul {
-        padding-top: 30px;
-      }
-
-      /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-      /*.sticky {
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
+	<style>
+		html{
+			font-family: 'Open Sans', sans-serif;
+			overflow: scroll;
+			  height: 100vh;
+			  background-color: #fffbf7;
+			  width:  100%;
+		}
+		h1{
+			font-size: 80px;
+		}
+		h2{
+			font-size: 50px;
+		}
+		p{
+			font-size: 20px;
+		}
+		li{
+			font-size: 20px;
 		}
 
-		/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0)
-		.sticky + #topJump{
-			padding-top: 1000px;
-			margin-top: 500px;
-		}*/
 
-      .spacer {
-        background-image: linear-gradient(to right, #e9dac4, #7a1f00, #290a00);
-        width: 100%;
-        height: 5px;
-      }
 
-      #what {
-        scroll-snap-align: center;
-      }
-      #whatBackground {
-        background-image: url("images/leaves.jpg");
-        height: 50vh;
-        width: 100%;
-        right-border: 10px solid black;
-        padding-top: 200px;
-        scroll-snap-align: center;
-      }
-      #whatHeader h2 {
-        text-align: center;
-        border: 10px solid #290a00;
-        background-color: #290a00;
-        color: #e9dac4;
-      }
-      #cherieDescr {
-        background-color: #e9dac4;
-        padding-top: 25px;
-        padding-left: 10px;
-        min-height: 100px;
-        overflow: auto;
-        padding-bottom: 15px;
-      }
+		#pageLinks{
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
 
-      #how {
-        scroll-snap-align: center;
-      }
-      #howBackground {
-        background-image: url("images/leaves.jpg");
-        height: 50vh;
-        width: 100%;
-        right-border: 10px solid black;
-        padding-top: 200px;
-        scroll-snap-align: center;
-      }
-      #howHeader h2 {
-        text-align: center;
-        border: 10px solid #290a00;
-        background-color: #290a00;
-        color: #e9dac4;
-      }
-      #howToCherie {
-        background-color: #e9dac4;
-        padding-top: 25px;
-        padding-left: 10px;
-        min-height: 100px;
-        overflow: auto;
-        padding-bottom: 15px;
-      }
+		#pageLinks a{
+			text-decoration: none;
+			color: #E9DAC4;
+		}
 
-      #next {
-        scroll-snap-align: center;
-      }
-      #nextBackground {
-        background-image: url("images/leaves.jpg");
-        height: 50vh;
-        width: 100%;
-        right-border: 10px solid black;
-        padding-top: 200px;
-      }
-      #nextHeader h2 {
-        text-align: center;
-        border: 10px solid #290a00;
-        background-color: #290a00;
-        color: #e9dac4;
-      }
-      #whatsnext {
-        background-color: #e9dac4;
-        padding-top: 25px;
-        padding-left: 10px;
-        min-height: 100px;
-        overflow: auto;
-        padding-bottom: 15px;
-      }
+		#nav{
+			background-color: #290A00;
+			height: 90px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			animation: fadein 1s;
+		}
 
-      .service-stick-mode {
-        margin-top: 70px;
-      }
+		#nav img{
+			width: 75px;
+			float: left;
+			position: absolute;
+		}
 
-      #backtotop {
-        display: flex;
-        align-items: right;
-        justify-content: right;
-        position: fixed;
-        right: 5px;
-        bottom: 5px;
-        background-color: hsla(360, 100%, 0%, 0.5);
-        float: right;
-        border: 3px solid hsla(360, 100%, 100%, 0.73);
-        padding: 2px;
-      }
-      #backtotop a {
-        text-decoration: none;
-        color: hsla(360, 100%, 100%, 0.73);
-      }
+		#nav li{
+			list-style-type: none;
+			float: left;
+			padding-right: 30px;
+			color: #E9DAC4;
+		}
 
-      @keyframes fadein {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0.5;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="nav">
-      <img src="images/almondLogo.png" />
+		#nav ul{
+			padding-top: 30px;
+		}
 
-      <div id="pageLinks">
-        <ul>
-          <li><a href="index.html"> Home </a></li>
-          <li><a href="stories.html"> Stories </a></li>
-          <li><a href="about.html"> About </a></li>
-          <li><a href="blog.html"> Blog </a></li>
-          <li><a href="contact.html"> Contact </a></li>
-          <li><a href="more.html"> More </a></li>
-        </ul>
-      </div>
 
-      <!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
-    </div>
 
-    <div
-      id="topBackground"
-      class="y-mandatory-scroll-snapping service-wrapper service-wrapper"
-    >
-      <div class="gradBorder">
-        <div id="welcome">
-          <h1>More than a story.</h1>
-        </div>
-      </div>
+		#topBackground{
+			background-color: #290A00;
+			height: 80vh;
+			scroll-snap-align: center;
 
-      <div id="backtotop">
-        <a href="index.html"> <p>↑</p> </a>
-      </div>
-    </div>
+			margin-top: 15px;
+			padding-top: 20vh;
 
-    <div id="topJump" class="spacer"></div>
+		}
+		#welcome {
+			padding: 15px;
+		  background-color: #290A00;
+		  margin: auto;
+		  width: 250px;
+		  height: 250px;
+		  margin-top: 30px;
+		  padding-top: 40px;
+		}
+		#welcome h1{
+			color: #E9DAC4;
+			display: inline-block;
+			letter-spacing: 0.03em;
+			font-size: 75px;
+		}
+		.gradBorder{
+			margin: auto;
+			width: 350px;
+			height: 350px;
+			background-image: url("images/blm-collage.png");
+			background-size: 500px;
+			padding: 10px;
+		}
 
-    <div id="content service-wrapper">
-      <div id="what" class="y-mandatory-scroll-snapping">
-        <div id="whatBackground">
-          <div id="whatHeader">
-            <h2>What is Chérie?</h2>
-          </div>
-        </div>
-        <div id="cherieDescr">
-          <p style="text-align: center">
-            Chérie is a site where you can learn, educate, and take action on a
-            variety of global issues.
-          </p>
-        </div>
-      </div>
+		#backtotop{
+		 	display: flex;
+		 	align-items: right;
+		 	justify-content: right;
+		 	position: fixed;
+		 	right: 5px;
+		 	bottom: 5px;
+		 	background-color: hsla(360, 100%, 0%, 0.5);
+		 	float: right;
+		 	border: 3px solid hsla(360, 100%, 100%, 0.73);
+		 	padding: 2px;
 
-      <div class="spacer"></div>
+		 }
+		 #backtotop a{
+		 	text-decoration: none;
+		 	color: hsla(360, 100%, 100%, 0.73);
+		 }
 
-      <div id="how" class="y-mandatory-scroll-snapping">
-        <div id="howBackground">
-          <div id="howHeader">
-            <h2>How do you use Chérie?</h2>
-          </div>
-        </div>
-        <div id="howToCherie">
-          <p style="text-align: center">
-            Cherie can be used by anyone who is interested in learning about
-            major global issues, taking action/inciting change to better the
-            status quo, or speaking on certain issues through submitting a
-            blogpost. When reading about issues and other people’s experiences,
-            it is important to keep an open mind and remain respectful. There
-            will be absolutely no tolerance for any form of discrimination.
-          </p>
-        </div>
-      </div>
 
-      <div class="spacer"></div>
 
-      <div id="next" class="y-mandatory-scroll-snapping">
-        <div id="nextBackground">
-          <div id="nextHeader">
-            <h2>What's next?</h2>
-          </div>
-        </div>
-        <div id="whatsnext">
-          <p style="text-align: center">
-            Feel free to look around the website, share our page with somone,
-            take action, submit a blogpost, or contact us at
-            contactcherietree@gmail.com
-          </p>
-        </div>
-      </div>
-    </div>
-  </body>
+		.section{
+			margin-top:  25px;
+			margin-bottom:  25px;
+			width:  40%;
+			float:  left;
+			background-color:  #290A00;
+			color:  #fffbf7;
+			border-radius:  20px;
+			text-align:  center;
+			padding:  10px;
+			margin-left:  5.75%;
+		}
 
-  <script>
-    window.onscroll = function () {
-      myFunction();
-    };
-    var navbar = document.getElementById("navbar");
-    var serviceWrapper = document.getElementById("service-wrapper");
-    var sticky = navbar.offsetTop;
+		.section img{
+			height:  400px;
+			margin:  10px;
+		}
 
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-        serviceWrapper.classList.add("service-stick-mode");
-      } else {
-        navbar.classList.remove("sticky");
-        serviceWrapper.classList.remove("service-stick-mode");
-      }
-    }
-  </script>
+		.section:hover{
+			background-color: hsla(15, 100%, 8%, 0.85);
+			color:  hsla(30, 100%, 94%, 0.89);
+		}
+
+
+
+
+
+
+		footer{
+			clear:  both;
+			background-color: #290A00;
+			height: 40px;
+			width: 100%;
+			color: #E9DAC4;
+		}
+		
+		footer p{
+			font-size: 15px;
+			text-align: center;
+			padding-top: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<img src="images/almondLogo.png">
+
+		<div id="pageLinks">
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="stories.html"> Stories </a> </li>
+				<li> <a href="about.html"> About </a> </li>
+				<li> <a href="contact.html"> Contact </a> </li>
+			</ul>
+		</div>
+
+		<!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
+	</div>
+
+
+	<div id="topBackground">
+		<div class="gradBorder">
+			<div id="welcome">
+				<h1> More than a story. </h1>
+			</div>
+		</div>
+
+
+		<div id="backtotop">
+			<a href="about.html"> <p> ↑ </p> </a>
+		</div>
+	</div>
+
+	<div id="boxes">
+		<a href="stories.html"> <div class="section starter">
+			<h1> See Stories </h1>
+			<img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
+			<p> Find resources on a variety of global humanitarian issues. </p>
+		</div> </a>
+		<a href="about.html"> <div class="section">
+			<h1> About Us </h1>
+			<img src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
+			<p> Learn about what Chérie is and how it all started. </p>
+		</div> </a>
+	</div>
+
+	
+
+	<footer> <p> Chérie Tree • About • Last updated: 10/23/2021 5:02 PM </p> </footer>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,233 +1,223 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+<head>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <title>Chérie • About</title>
+	<title>Chérie • About</title>
 
-    <style>
-      html {
-        font-family: "Open Sans", sans-serif;
-        overflow: scroll;
-        height: 100vh;
-        background-color: #fffbf7;
-        width: 100%;
-      }
-      h1 {
-        font-size: 80px;
-      }
-      h2 {
-        font-size: 50px;
-      }
-      p {
-        font-size: 20px;
-      }
-      li {
-        font-size: 20px;
-      }
+	<style>
+		html{
+			font-family: 'Open Sans', sans-serif;
+			overflow: scroll;
+			  height: 100vh;
+			  background-color: #fffbf7;
+			  width:  100%;
+		}
+		h1{
+			font-size: 80px;
+		}
+		h2{
+			font-size: 50px;
+		}
+		p{
+			font-size: 20px;
+		}
+		li{
+			font-size: 20px;
+		}
 
-      #pageLinks {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
 
-      #pageLinks a {
-        text-decoration: none;
-        color: #e9dac4;
-      }
 
-      #nav {
-        background-color: #290a00;
-        height: 90px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        animation: fadein 1s;
-      }
+		#pageLinks{
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
 
-      #nav img {
-        width: 75px;
-        float: left;
-        position: absolute;
-      }
+		#pageLinks a{
+			text-decoration: none;
+			color: #E9DAC4;
+		}
 
-      #nav li {
-        list-style-type: none;
-        float: left;
-        padding-right: 30px;
-        color: #e9dac4;
-      }
+		#nav{
+			background-color: #290A00;
+			height: 90px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			animation: fadein 1s;
+		}
 
-      #nav ul {
-        padding-top: 30px;
-      }
+		#nav img{
+			width: 75px;
+			float: left;
+			position: absolute;
+		}
 
-      #topBackground {
-        background-color: #290a00;
-        height: 80vh;
-        scroll-snap-align: center;
+		#nav li{
+			list-style-type: none;
+			float: left;
+			padding-right: 30px;
+			color: #E9DAC4;
+		}
 
-        margin-top: 15px;
-        padding-top: 20vh;
-      }
-      #welcome {
-        padding: 15px;
-        background-color: #290a00;
-        margin: auto;
-        width: 250px;
-        height: 250px;
-        margin-top: 30px;
-        padding-top: 40px;
-      }
-      #welcome h1 {
-        color: #e9dac4;
-        display: inline-block;
-        letter-spacing: 0.03em;
-        font-size: 75px;
-      }
-      .gradBorder {
-        margin: auto;
-        width: 350px;
-        height: 350px;
-        background-image: url("images/blm-collage.png");
-        background-size: 500px;
-        padding: 10px;
-      }
+		#nav ul{
+			padding-top: 30px;
+		}
 
-      #backtotop {
-        display: flex;
-        align-items: right;
-        justify-content: right;
-        position: fixed;
-        right: 5px;
-        bottom: 5px;
-        background-color: hsla(360, 100%, 0%, 0.5);
-        float: right;
-        border: 3px solid hsla(360, 100%, 100%, 0.73);
-        padding: 2px;
-      }
-      #backtotop a {
-        text-decoration: none;
-        color: hsla(360, 100%, 100%, 0.73);
-      }
 
-      .abt-section {
-        min-height: 300px;
-        /*border-bottom:  2px solid #290A00;*/
-        margin-left: 20px;
-        padding-top: 20px;
-      }
-      .abt-section img {
-        width: 20%;
-        display: flex;
-        float: left;
-        margin-right: 20px;
-      }
 
-      .abt-section p {
-        padding-top: 20px;
-        line-height: 30px;
-      }
+		#topBackground{
+			background-color: #290A00;
+			height: 80vh;
+			scroll-snap-align: center;
 
-      #mission {
-        clear: both;
-      }
+			margin-top: 15px;
+			padding-top: 20vh;
 
-      .spacer1 {
-        height: 20px;
-        width: 100%;
-        clear: both;
-      }
+		}
+		#welcome {
+			padding: 15px;
+		  background-color: #290A00;
+		  margin: auto;
+		  width: 250px;
+		  height: 250px;
+		  margin-top: 30px;
+		  padding-top: 40px;
+		}
+		#welcome h1{
+			color: #E9DAC4;
+			display: inline-block;
+			letter-spacing: 0.03em;
+			font-size: 75px;
+		}
+		.gradBorder{
+			margin: auto;
+			width: 350px;
+			height: 350px;
+			background-image: url("images/blm-collage.png");
+			background-size: 500px;
+			padding: 10px;
+		}
 
-      .spacer2 {
-        background-image: linear-gradient(to right, #e9dac4, #7a1f00, #290a00);
-        width: 100%;
-        height: 5px;
-        clear: both;
-      }
+		#backtotop{
+		 	display: flex;
+		 	align-items: right;
+		 	justify-content: right;
+		 	position: fixed;
+		 	right: 5px;
+		 	bottom: 5px;
+		 	background-color: hsla(360, 100%, 0%, 0.5);
+		 	float: right;
+		 	border: 3px solid hsla(360, 100%, 100%, 0.73);
+		 	padding: 2px;
 
-      footer {
-        background-color: #290a00;
-        height: 40px;
-        width: 100%;
-        color: #e9dac4;
-      }
+		 }
+		 #backtotop a{
+		 	text-decoration: none;
+		 	color: hsla(360, 100%, 100%, 0.73);
+		 }
 
-      footer p {
-        font-size: 15px;
-        text-align: center;
-        padding-top: 8px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="nav">
-      <img src="images/almondLogo.png" />
+		 .abt-section{
+		 	min-height:  300px;
+		 	/*border-bottom:  2px solid #290A00;*/
+		 	margin-left:  20px;
+		 	padding-top:  20px;
+		 }
+		 .abt-section img{
+		 	width:  20%;
+		 	display:  flex;
+		 	float:  left;
+		 	margin-right:  20px;
+		 }
 
-      <div id="pageLinks">
-        <ul>
-          <li><a href="index.html"> Home </a></li>
-          <li><a href="stories.html"> Stories </a></li>
-          <li><a href="about.html"> About </a></li>
-          <li><a href="blog.html"> Blog </a></li>
-          <li><a href="contact.html"> Contact </a></li>
-          <li><a href="more.html"> More </a></li>
-        </ul>
-      </div>
+		 .abt-section p{
+		 	padding-top:  20px;
+		 	line-height:  30px;
+		 }
 
-      <!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
-    </div>
+		 #mission{
+		 	clear:  both;
+		 }
 
-    <div id="topBackground">
-      <div class="gradBorder">
-        <div id="welcome">
-          <h1>Hear our story.</h1>
-        </div>
-      </div>
+		 .spacer1{
+			height: 20px;
+			width:  100%;
+			clear:  both;
+		}
 
-      <div id="backtotop">
-        <a href="about.html"> <p>↑</p> </a>
-      </div>
-    </div>
+		.spacer2{
+			background-image: linear-gradient(to right, #E9DAC4, #7A1F00, #290A00);
+			width: 100%;
+			height: 5px;
+			clear:  both;
+		}
 
-    <div class="spacer2"></div>
+		footer{
+			background-color: #290A00;
+			height: 40px;
+			width: 100%;
+			color: #E9DAC4;
+		}
+		
+		footer p{
+			font-size: 15px;
+			text-align: center;
+			padding-top: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<img src="images/almondLogo.png">
 
-    <div id="akshaya" class="abt-section">
-      <img src="images/fake-akshaya.jpg" />
-      <h1 class="section">Hi, I'm Akshaya!</h1>
-      <p>
-        I'm a rising junior at Natick High School. Many of my interests lie
-        within blending technology and social activism within my community. As
-        someone who constantly has an eye on both the news and social media, I
-        wanted to create a platform where people can easily learn about issues
-        and how to take action. In my free time, I love to go outside, spend
-        time with my friends and family, debate, and cook!
-      </p>
-    </div>
+		<div id="pageLinks">
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="stories.html"> Stories </a> </li>
+				<li> <a href="about.html"> About </a> </li>
+				<li> <a href="contact.html"> Contact </a> </li>
+			</ul>
+		</div>
 
-    <div class="spacer1"></div>
-    <div class="spacer2"></div>
+		<!-- <a href="what"> V </a>  TODO: make this a sign to scroll down/ back to top button -->
+	</div>
 
-    <div id="melica" class="abt-section">
-      <img style="text-align: center" src="fake-melica.jpg" />
-      <h1 class="section">Hi, I'm Melica!</h1>
-      <p>
-        I'm a rising senior at Natick High School who has always wanted to
-        create a space where people can learn, take action, and share their
-        personal experiences, opinions, and ideas. Since middle school, when I
-        first began to watch the news, I've been immensely passionate about
-        making sure that no major issue goes unnoticed. In my free time, I like
-        to sketch, play with my cats, and go shopping.
-      </p>
-    </div>
 
-    <!-- <div class="spacer1"></div>
+	<div id="topBackground">
+		<div class="gradBorder">
+			<div id="welcome">
+				<h1> Hear our story. </h1>
+			</div>
+		</div>
+
+
+		<div id="backtotop">
+			<a href="about.html"> <p> ↑ </p> </a>
+		</div>
+	</div>
+
+	<div class="spacer2"></div>
+
+
+	<div id="akshaya" class="abt-section">
+		<img src = "images/akshaya.jpg">
+		<h1 class="section"> Hi, I'm Akshaya! </h1>
+		<p> Akshaya is a  junior at Natick High School. Many of her interests lie within blending technology and social activism within her community. As someone who constantly has an eye on both the news and social media, she wanted to create a platform where people can easily learn about issues and how to take action. In her free time, Akshaya likes to go outside, spend time with her friends and family, debate, and cook. </p>
+	</div>
+
+	<div class="spacer1"></div>
+	<div class="spacer2"></div>
+
+	<div id="melica" class="abt-section">
+		<img src = "images/melica.png">
+		<h1 class="section"> Hi, I'm Melica! </h1>
+		<p> Melica is a  senior at Natick High School who has always wanted to create a space where people can learn, take action, and share their personal experiences, opinions, and ideas. Since she started watching the news, she’s been immensely passionate about making sure that no major issue goes unnoticed due to limited media coverage. In her free time, Melica likes to draw, play with her cats, and go shopping. </p>
+	</div>
+
+	<div class="spacer1"></div>
 	<div class="spacer2"></div>
 
 	<div id="mission" class="abt-section">
@@ -245,12 +235,20 @@
 		<img src="images/redLogo.png">
 		<h1 class="section"> How do you use Cherie? </h1>
 		<p> Cherie can be used by anyone who is interested in learning about major global issues, taking action/inciting change to better the status quo, or speaking on certain issues through submitting a blogpost. When reading about issues and other people’s experiences, it is important to keep an open mind and remain respectful. There will be absolutely no tolerance for any form of discrimination. </p>
-	</div> 
+	</div>
 
-	^THIS IS ON THE FIRST PAGE!! -->
-
-    <footer>
-      <p>Chérie Tree • About • Last updated: 9/4/2021 10:50 PM</p>
-    </footer>
-  </body>
+	<footer> <p> Chérie Tree • About • Last updated: 10/23/2021 5:44 PM </p> </footer>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
